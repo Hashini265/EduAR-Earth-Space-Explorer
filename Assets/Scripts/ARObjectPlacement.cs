@@ -18,7 +18,9 @@ public class ARObjectPlacement : MonoBehaviour
     void Start()
     {
         raycastManager = GetComponent<ARRaycastManager>();
-        earthInfoPanel.SetActive(false);
+
+        if (earthInfoPanel != null)
+            earthInfoPanel.SetActive(false);
     }
 
     void Update()
@@ -33,11 +35,32 @@ public class ARObjectPlacement : MonoBehaviour
 
         if (Physics.Raycast(ray, out RaycastHit objectHit))
         {
-            EarthInfo info = objectHit.collider.GetComponentInParent<EarthInfo>();
+            EarthInfo earthInfo =
+                objectHit.collider.GetComponentInParent<EarthInfo>();
 
-            if (info != null)
+            MoonInfo moonInfo =
+                objectHit.collider.GetComponentInParent<MoonInfo>();
+
+            MarsInfo marsInfo =
+                objectHit.collider.GetComponentInParent<MarsInfo>();
+
+            if (earthInfo != null)
             {
-                earthInfoText.text = info.GetInfo();
+                earthInfoText.text = earthInfo.GetInfo();
+                earthInfoPanel.SetActive(true);
+                return;
+            }
+
+            if (moonInfo != null)
+            {
+                earthInfoText.text = moonInfo.GetInfo();
+                earthInfoPanel.SetActive(true);
+                return;
+            }
+
+            if (marsInfo != null)
+            {
+                earthInfoText.text = marsInfo.GetInfo();
                 earthInfoPanel.SetActive(true);
                 return;
             }

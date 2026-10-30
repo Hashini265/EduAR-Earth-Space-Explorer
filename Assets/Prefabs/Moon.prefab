@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 6339708078819744427}
   - component: {fileID: 8191361568456585032}
   - component: {fileID: 7820190272724620903}
+  - component: {fileID: 2564159401621998790}
+  - component: {fileID: -4976289663916266279}
   m_Layer: 0
   m_Name: Moon
   m_TagString: Untagged
@@ -127,3 +129,28 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EarthInteraction
   rotationSpeed: 0.2
   scaleSpeed: 0.005
+--- !u!114 &2564159401621998790
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2875577926688735483}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 011482326a2cecb4c8b4e2c9fbeb3643, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EarthRotation
+  rotationSpeed: 20
+--- !u!114 &-4976289663916266279
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2875577926688735483}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86f512958ff3ec544b44916f151a6fa2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MoonInfo
