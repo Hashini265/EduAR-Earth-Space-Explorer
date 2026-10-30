@@ -43,7 +43,11 @@ public class ARObjectPlacement : MonoBehaviour
 
             MarsInfo marsInfo =
                 objectHit.collider.GetComponentInParent<MarsInfo>();
+            JupiterInfo jupiterInfo =
+    objectHit.collider.GetComponentInParent<JupiterInfo>();
 
+            SaturnInfo saturnInfo =
+                objectHit.collider.GetComponentInParent<SaturnInfo>();
             if (earthInfo != null)
             {
                 earthInfoText.text = earthInfo.GetInfo();
@@ -61,6 +65,19 @@ public class ARObjectPlacement : MonoBehaviour
             if (marsInfo != null)
             {
                 earthInfoText.text = marsInfo.GetInfo();
+                earthInfoPanel.SetActive(true);
+                return;
+            }
+            if (jupiterInfo != null)
+            {
+                earthInfoText.text = jupiterInfo.GetInfo();
+                earthInfoPanel.SetActive(true);
+                return;
+            }
+
+            if (saturnInfo != null)
+            {
+                earthInfoText.text = saturnInfo.GetInfo();
                 earthInfoPanel.SetActive(true);
                 return;
             }
