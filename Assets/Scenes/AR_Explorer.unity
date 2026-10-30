@@ -977,9 +977,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: Earth_Internal_Structure
       objectReference: {fileID: 0}
+    - target: {fileID: 995488165726895914, guid: ad58f06a73b05f144ae7331d68805555, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3171032166709810468, guid: ad58f06a73b05f144ae7331d68805555, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.35728
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3171032166709810468, guid: ad58f06a73b05f144ae7331d68805555, type: 3}
       propertyPath: m_LocalPosition.y
@@ -987,7 +991,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3171032166709810468, guid: ad58f06a73b05f144ae7331d68805555, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1.19475
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3171032166709810468, guid: ad58f06a73b05f144ae7331d68805555, type: 3}
       propertyPath: m_LocalRotation.w
