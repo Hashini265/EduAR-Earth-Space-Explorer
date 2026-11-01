@@ -40,7 +40,7 @@ public class QuizManager : MonoBehaviour
 
     void Start()
     {
-        quizPanel.SetActive(true);
+        quizPanel.SetActive(false);
         restartButton.gameObject.SetActive(false);
         nextButton.gameObject.SetActive(false);
 
