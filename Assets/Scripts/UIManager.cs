@@ -11,6 +11,8 @@ public class UIManager : MonoBehaviour
 
     [Header("Other Panels")]
     public GameObject earthInfoPanel;
+    public GameObject earthStructureModel;
+   
 
     void Start()
     {
@@ -33,6 +35,7 @@ public class UIManager : MonoBehaviour
     {
         CloseAllPanels();
         earthLayerPanel.SetActive(true);
+        earthStructureModel.SetActive(true);
     }
 
     public void OpenQuiz()
@@ -50,6 +53,8 @@ public class UIManager : MonoBehaviour
 
         if (earthInfoPanel != null)
             earthInfoPanel.SetActive(false);
+        if (earthStructureModel != null)
+            earthStructureModel.SetActive(false);
     }
 
     public void ExitApplication()
